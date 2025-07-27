@@ -1,27 +1,47 @@
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import ProductItem from './ProductItem';
 import classes from './Products.module.css';
-
-const DUMMY_PRODUCTS = [
-    {id:'p1',price:5, name: 'Books-1', description: 'Books are every where.'},
-    {id:'p2',price:8, name: 'Books-2', description: 'Books are every where.'},
-    {id:'p3',price:7, name: 'Books-3', description: 'Books are every where.'},
-]
+import { initializeProducts } from '../../store/products-actions';
 
 const Products = (props) => {
+  const dispatch = useDispatch();
+  const { products, loading, error } = useSelector((state) => state.products);
+
+  useEffect(() => {
+    dispatch(initializeProducts());
+  }, [dispatch]);
+
+  if (loading) {
+    return (
+      <section className={classes.products}>
+        <h2>Loading products...</h2>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section className={classes.products}>
+        <h2>Error loading products: {error}</h2>
+      </section>
+    );
+  }
+
   return (
     <section className={classes.products}>
       <h2>Buy your favorite products</h2>
       <ul>
-          {DUMMY_PRODUCTS.map(product => (
-              <ProductItem
-                  key={product.id}
-                  id={product.id}
-                  name={product.name}
-                  price={product.price}
-                  description={product.description}
-              />
-          ))}
-
+        {products.map((product) => (
+          <ProductItem
+            key={product.id}
+            id={product.id}
+            name={product.name}
+            price={product.price}
+            description={product.description}
+            image={product.image}
+          />
+        ))}
       </ul>
     </section>
   );
