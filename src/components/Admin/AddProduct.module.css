@@ -1,70 +1,70 @@
 .form {
-  margin: 1rem 0;
+    margin: 1rem 0;
 }
 
 .control {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .control label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #353336;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #353336;
 }
 
 .control input,
 .control textarea {
-  display: block;
-  font: inherit;
-  padding: 0.2rem;
-  border-radius: 12px;
-  border: 1px solid #ccc;
-  width: 100%;
-  max-width: 100%;
+    display: block;
+    font: inherit;
+    padding: 0.2rem;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 100%;
 }
 
 .control textarea {
-  min-height: 100px;
-  resize: vertical;
+    min-height: 100px;
+    resize: vertical;
 }
 
 .actions {
-  text-align: right;
+    text-align: right;
 }
 
 .actions button {
-  font: inherit;
-  cursor: pointer;
-  background-color: #77002e;
-  color: white;
-  padding: 0.5rem 1.5rem;
-  border: 1px solid #77002e;
-  border-radius: 6px;
-  font-weight: bold;
+    font: inherit;
+    cursor: pointer;
+    background-color: #77002e;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #77002e;
+    border-radius: 6px;
+    font-weight: bold;
 }
 
 .actions button:hover,
 .actions button:active {
-  background-color: #a50e48;
-  border-color: #a50e48;
+    background-color: #a50e48;
+    border-color: #a50e48;
 }
 
 .preview {
-  margin: 1rem 0;
+    margin: 1rem 0;
 }
 
 .preview label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #353336;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #353336;
 }
 
 .previewImage {
-  max-width: 200px;
-  max-height: 200px;
-  border-radius: 8px;
-  border: 2px solid #ddd;
-  object-fit: cover;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    object-fit: cover;
 } 
